@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TaskWebApi.Common;
 using TaskWebApi.DTOs;
 using TaskWebApi.Services;
@@ -7,6 +8,7 @@ using static TaskWebApi.Common.Enum;
 
 namespace TaskWebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
